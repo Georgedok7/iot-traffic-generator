@@ -22,17 +22,28 @@ def generate_port_scan(count=20, target_ip="192.168.1.250"):
 def generate_mqtt_flood(count=100, broker_ip="192.168.1.200"):
     packets = []
 
-    for _ in range(count):
-        source_port = random.randint(49152, 65535)
-        value = str(random.randint(0, 100)).encode()
+    available_ports = range(49152, 65536)
+
+    if count > len(available_ports):
+        raise ValueError(
+            "MQTT flood count exceeds the available source port range."
+        )
+
+    source_ports = random.sample(
+        available_ports,
+        count
+    )
+
+    for source_port in source_ports:
+        value = str(
+            random.randint(0, 100)
+        ).encode()
 
         packet = IP(dst=broker_ip) / TCP(
             sport=source_port,
             dport=1883,
             flags="PA"
-        ) / MQTT(
-            type=3
-        ) / MQTTPublish(
+        ) / MQTT(type=3) / MQTTPublish(
             topic=b"home/temperature",
             value=value
         )
