@@ -1,3 +1,5 @@
+[🇬🇧 English version](README.md)
+
 # IoT Traffic Generator
 
 Συνθετικός generator δικτυακής κίνησης IoT που αναπτύχθηκε στο πλαίσιο πτυχιακής εργασίας.
