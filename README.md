@@ -49,6 +49,7 @@ detection experiments.
 
 ---
 
+```markdown
 ## Project Structure
 
 ```text
@@ -104,9 +105,7 @@ config.py
 For example:
 
 RANDOM_SEED = 42
-
 TOTAL_FLOWS = 10000
-
 ATTACK_RATIO = 0.20
 
 DNS_RATIO = 0.40
