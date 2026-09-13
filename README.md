@@ -334,6 +334,37 @@ The final experiment produced:
 
 ---
 
+## Results
+
+The generated traffic was analyzed to examine its label distribution,
+protocol composition and temporal characteristics across attack types.
+
+### Traffic Label Distribution
+
+![Traffic Label Distribution](results/label_distribution.png)
+
+The generated dataset contains both normal and malicious traffic,
+with the four attack scenarios distributed according to the configured
+attack ratio.
+
+### Protocol Distribution
+
+![Protocol Distribution](results/protocol_distribution.png)
+
+The generated traffic includes TCP and UDP communication resulting from
+the supported DNS, HTTP, MQTT and attack scenarios.
+
+### Average Inter-Arrival Time by Attack Type
+
+![Average Inter-Arrival Time by Attack Type](results/attack_inter_arrival.png)
+
+Different attack scenarios exhibit distinct temporal characteristics,
+reflecting the different timing profiles used during traffic generation.
+
+---
+
+---
+
 ## Statistical Analysis
 
 After dataset generation, the system calculates statistics including:
