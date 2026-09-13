@@ -10,6 +10,9 @@ produces PCAP files, extracts network flows using Zeek, and generates
 labeled CSV datasets for network security research and intrusion
 detection experiments.
 
+
+---
+
 ## Features
 
 - Synthetic IoT network traffic generation
@@ -31,6 +34,8 @@ detection experiments.
 - Statistical analysis
 - Automatic visualization and plot generation
 
+---
+
 ## Technologies
 
 - Python 3
@@ -42,8 +47,11 @@ detection experiments.
 - Zeek
 - WSL / Ubuntu
 
+---
+
 ## Project Structure
 
+```text
 iot-traffic-generator/
 ├── generators/
 │   ├── attack_generator.py
